@@ -452,3 +452,127 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ================================================================
+   RESPONSIVE STYLES (Add to bottom of layanan.css)
+   ================================================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    /* Layanan Section */
+    .layanan .layanan-container {
+        padding: 0 30px;
+    }
+
+    /* Facilities Grid: 3 columns for tablet */
+    .fasilitas-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .fasilitas-card {
+        border-right: 1px solid #e5e7eb; /* Keep borders for grid look */
+    }
+
+    /* CTA Section */
+    .cta-wrapper {
+        gap: 30px;
+    }
+    
+    .cta-image img {
+        width: 100%; /* Scale image to fit half screen */
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .logo img {
+        height: auto;
+    }
+
+    /* 2. Hero Section */
+    .hero {
+        height: 50vh;
+    }
+
+    /* 3. Layanan Items */
+    .layanan .layanan-header h1 {
+        font-size: 28px;
+    }
+
+    .layanan-container .section-header {
+        margin-top: 60px; /* Reduced space */
+    }
+
+    .layanan .layanan-item {
+        padding: 25px 20px;
+        text-align: justify; /* Better readability on small screens */
+    }
+
+    /* 4. Fasilitas Grid (Single Column) */
+    .fasilitas {
+        padding: 40px 0;
+    }
+
+    .fasilitas-container {
+        padding: 0 20px;
+    }
+
+    .fasilitas-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+        gap: 15px;
+    }
+
+    .fasilitas-card {
+        padding: 30px 20px;
+        border: 1px solid #e5e7eb; /* Full border for vertical list */
+    }
+
+    .icon-wrap {
+        margin-bottom: 20px;
+    }
+
+    /* 5. CTA Section (Stacking) */
+    .cta-fastcargo {
+        padding: 60px 0;
+    }
+
+    .cta-wrapper {
+        grid-template-columns: 1fr; /* Stack image and text */
+        text-align: center;
+    }
+
+    .cta-image img {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .cta-content p {
+        margin: 0 auto 25px auto;
+    }
+
+    /* 6. Footer (Stacked) */
+    .footer {
+        padding: 40px 20px 20px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .logo-col {
+        grid-column: span 1;
+        align-items: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}

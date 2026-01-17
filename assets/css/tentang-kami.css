@@ -494,3 +494,149 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ================================================================
+   RESPONSIVE STYLES (Add to bottom of tentang-kami.css)
+   ================================================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    /* Tentang Kami Section */
+    .tentang-kami {
+        height: auto;
+    }
+
+    .tentang-kami .tentangkami-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Grid Adjustments */
+    .komitmen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo-col {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .logo img {
+        height: 35px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: 60vh; /* Set height to show more background */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    /* BLUE COUNTER BOXES: Move to the bottom of the section */
+    .tentang-kami .image-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tentang-kami .image-left .counter {
+        display: flex;
+        flex-direction: row; /* Side by side boxes */
+        gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tentang-kami .image-left .counter .client, 
+    .tentang-kami .image-left .counter .experience {
+        flex: 1;
+        height: 110px;
+        margin-bottom: 0;
+    }
+
+    .tentang-kami .image-left .counter h2 {
+        font-size: 24px;
+    }
+
+    .tentang-kami .image-left .counter p {
+        font-size: 11px;
+    }
+
+    /* CONTENT & VISI MISI */
+    .tentang-kami {
+        padding: 40px 0;
+        height: auto;
+    }
+
+    .tentang-kami .content-right .visimisi {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tentang-kami h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .tentang-kami .content-right .section-header .underline {
+        margin: 0 auto 24px auto;
+    }
+
+    /* KOMITMEN SECTION */
+    .komitmen {
+        padding: 60px 0;
+    }
+
+    .komitmen-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .komitmen-card {
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .icon-wrap {
+        justify-content: center;
+    }
+
+    /* CTA SECTION */
+    .cta-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .logo-col {
+        grid-column: span 1;
+        margin-bottom: 20px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}
